@@ -36,6 +36,7 @@ const UserList = () => {
 
     const sortWorkerData = async () => {
         try {
+            const users = await fetchUsers();
            await sortListDescWorker(users);
             setWorkerState('ASC')
             // setUsers(sortedData)
@@ -58,6 +59,7 @@ const UserList = () => {
 
     const sortWorkerDataAsc = async () => {
         try {
+            const users = await fetchUsers();
             await sortListAscWorker(users);
             setWorkerState('DESC');
             // setUsers(sortedData)
