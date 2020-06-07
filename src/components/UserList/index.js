@@ -35,10 +35,17 @@ const UserList = () => {
     }
 
     const sortWorkerData = async () => {
-        const sortedData = await sortListDescWorker(users);
-        setWorkerState('ASC')
-        // setUsers(sortedData)
-     addToast("Finished: Sort using useWorker.", { appearance: "success" });
+        try {
+           await sortListDescWorker(users);
+            setWorkerState('ASC')
+            // setUsers(sortedData)
+         addToast("Finished: Sort using useWorker.", { appearance: "success" });
+        }
+        catch(e){
+            console.log(e);
+         addToast("Some Error Occurred", { appearance: "error" });
+        }
+       
     }
 
     const sortDataAsc = () => {
@@ -50,10 +57,17 @@ const UserList = () => {
     }
 
     const sortWorkerDataAsc = async () => {
-        const sortedData = await sortListAscWorker(users);
-        setWorkerState('DESC');
-        // setUsers(sortedData)
-        addToast("Finished: Sort using useWorker.", { appearance: "success" });
+        try {
+            await sortListAscWorker(users);
+            setWorkerState('DESC');
+            // setUsers(sortedData)
+            addToast("Finished: Sort using useWorker.", { appearance: "success" });
+        }
+        catch(e){
+            console.log(e);
+            addToast("Some Error Occurred", { appearance: "error" });
+        }
+     
     }
 
 
