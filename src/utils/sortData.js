@@ -3,7 +3,7 @@ import faker from 'faker';
 export function fetchUsers() {
     const users = [];
 
-    for (let i = 0; i < 50000; i++) {
+    for (let i = 0; i < 25000; i++) {
         let id = faker.random.uuid();
         let name = faker.name.findName();
         let email = faker.internet.email();

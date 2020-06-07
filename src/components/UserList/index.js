@@ -34,9 +34,9 @@ const UserList = () => {
        addToast("Finished: Sort.", { appearance: "success" });
     }
 
-    const sortWorkerData =  () => {
+    const sortWorkerData = async () => {
         try {
-            sortListDescWorker(users);
+           await sortListDescWorker(users);
             setWorkerState('ASC')
             // setUsers(sortedData)
          addToast("Finished: Sort using useWorker.", { appearance: "success" });
@@ -49,16 +49,16 @@ const UserList = () => {
     }
 
     const sortDataAsc = () => {
-       sortListAscending(users);
+        const sortedData = sortListAscending(users);
 
         setStatus('DESC');
         // setUsers(sortedData)
         addToast("Finished: Sort.", { appearance: "success" });
     }
 
-    const sortWorkerDataAsc =  () => {
+    const sortWorkerDataAsc = async () => {
         try {
-             sortListAscWorker(users);
+            await sortListAscWorker(users);
             setWorkerState('DESC');
             // setUsers(sortedData)
             addToast("Finished: Sort using useWorker.", { appearance: "success" });
