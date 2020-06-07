@@ -1,0 +1,35 @@
+.user-div{
+    display: flex;
+    justify-content: center;
+}
+
+.user-list{
+    overflow-y: scroll;
+    height: 500px;
+    list-style: none;
+    padding: 10px;
+}
+
+.sort-button {
+    width: 150px;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: #fff;
+    align-self: center;
+}
+
+.user-list-item{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.item-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments-count{
+    align-self: center;
+}
